@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env
+.runtime/
+*.log
+__pycache__/
+*.pyc
+backend/storage/jobs/*
+backend/storage/sessions/*
+!backend/storage/jobs/.gitkeep
+!backend/storage/sessions/.gitkeep

@@ -1,0 +1,8 @@
+node_modules
+frontend/dist
+backend/storage/jobs/*
+backend/storage/sessions/*
+.runtime
+.env
+.git
+*.log

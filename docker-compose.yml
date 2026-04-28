@@ -1,0 +1,16 @@
+services:
+  app:
+    build: .
+    ports:
+      - "4000:4000"
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      SERVE_FRONTEND: "true"
+      PORT: "4000"
+      BLENDER_BIN: blender
+      ASSIMP_BIN: assimp
+      STORAGE_ROOT: /app/backend/storage
+    volumes:
+      - ./backend/storage:/app/backend/storage

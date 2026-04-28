@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: ai-3d-model-generator
+    env: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    plan: standard
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SERVE_FRONTEND
+        value: "true"
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: BLENDER_BIN
+        value: blender
+      - key: ASSIMP_BIN
+        value: assimp
+      - key: STORAGE_ROOT
+        value: /app/backend/storage
